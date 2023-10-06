@@ -1,0 +1,121 @@
+/*package com.company.first_lab;
+
+import com.company.first_lab.Classes.*;
+
+import java.util.Dictionary;
+import java.util.Scanner;
+
+public class Main {
+
+    public static int[] nums_entry_int(int quantity){
+        int[] result = new int[quantity];
+        Scanner sc = new Scanner(System.in);
+        for(int i=0; i<quantity;i++){
+            System.out.print("\nEnter number:\n");
+            result[i] = Integer.parseInt(sc.nextLine());
+        }
+        sc.close();
+        return result;
+    }
+
+    public static double[] nums_entry_double(int quantity){
+        double[] result = new double[quantity];
+        Scanner scan = new Scanner(System.in);
+        for(int i=0; i<quantity;i++){
+            System.out.println("\nEnter number:\n");
+            result[i] = Double.parseDouble(scan.nextLine());
+        }
+        scan.close();
+        return result;
+    }
+
+    public static void print_output_simple_num(boolean is_integer, int natural, double real){
+        System.out.print("\nResult is :");
+        if(is_integer)
+            System.out.println(natural);
+        else
+            System.out.println(real);
+    }
+
+    public static void print_table(Dictionary<Double,Double> data){//проверь
+        System.out.println("\nResulting table:\n(format: argument -- value)\n");
+        while(data.keys().hasMoreElements()){
+            Double argument = data.keys().nextElement();
+            Double value = data.get(argument);
+            System.out.println(argument+" -- "+value);
+        }
+    }
+
+    public static void print_output_boolean(boolean result){
+        System.out.println("\nResult is: "+result);
+    }
+
+    public static void print_int_array(Object[] array){
+        System.out.println("Result is: ");
+        for(int i=0;i<array.length;i++){
+            System.out.print(array[i]+" ");
+        }
+        System.out.println();
+    }
+
+    public static void print_square_matrix_int(int n, int[][]matrix){
+        System.out.println("Resulting matrix:");
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                System.out.print(matrix[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+
+
+    public static void first_task(){
+        double[] nums = nums_entry_double(2);
+        formula_class curr_formula = new formula_class(nums[0],nums[1]);
+        print_output_simple_num(false, 0, curr_formula.calc());
+    }
+    public static void second_task(){
+        int[] numbers = nums_entry_int(2);
+        field_coordinates_class curr_field = new field_coordinates_class(numbers[0], numbers[1]);
+        print_output_boolean(curr_field.is_inside());
+    }
+    public static void third_task(){
+        double[] numbers = nums_entry_double(3);
+        tg_values_class curr_place = new tg_values_class(numbers[0],numbers[1],numbers[2]);
+        print_table(curr_place.get_values());
+    }
+    public static void fourth_task(){
+        int[] arr_len = nums_entry_int(1);
+        int[] arr_vals = nums_entry_int(arr_len[0]);
+        primes_in_array_class curr_array = new primes_in_array_class(arr_len[0], arr_vals);
+        print_int_array(curr_array.find_all_primes().toArray());//проверь реализацию
+    }
+    public static void fifth_task(){
+
+    }
+    public static void sixth_task(){
+        int[] arr_len = nums_entry_int(1);
+        int[] arr_vals = nums_entry_int(arr_len[0]);
+        make_matrix_class curr_matrix = new make_matrix_class(arr_vals);
+        print_square_matrix_int(arr_len[0], curr_matrix.transform_to_matrix());
+    }
+    public static void seventh_task(){
+
+    }
+    public static void eighth_task(){
+
+    }
+
+
+    public static void main(String[] args) {
+	// write your code here
+        first_task();
+        second_task();
+        third_task();
+        fourth_task();
+        fifth_task();
+        sixth_task();
+        seventh_task();
+        eighth_task();
+    }
+}*/
