@@ -5,6 +5,24 @@ public class Book {
     private String author;
     private int price;
     private static int edition;
+    private int isbn;
+
+    public Book(String ttl, String auth, int money){
+        this.title = ttl;
+        this.author = auth;
+        this.price = money;
+    }
+    public Book(){}
+
+    public String get_author(){
+        return this.author;
+    }
+    public String get_title(){
+        return this.title;
+    }
+    public int get_price(){
+        return this.price;
+    }
 
     @Override
     public int hashCode() {
@@ -33,5 +51,9 @@ public class Book {
         String book_info = "Book info:\ntitle:"+title+"\nauthor:"+author+"\nprice:"+price+"\nedition:"+edition+"\n";
         return book_info;
     }
-
+    @Override
+    public Book clone(){
+        Book new_book = new Book(this.title, this.author, this.price);
+        return new_book;
+    }
 }
