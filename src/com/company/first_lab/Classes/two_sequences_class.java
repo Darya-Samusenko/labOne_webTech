@@ -22,7 +22,8 @@ public class two_sequences_class {
     public int[] places_to_insert(int[] sequence_a, int[] sequence_b){
         int[] all_places = new int[sequence_b.length];
         for(int i = 0; i < sequence_b.length;i++){
-            all_places[i] = binary_search(sequence_a, 0, sequence_a.length - 1, sequence_b[i]);
+            all_places[i] = binary_search(sequence_a, 0, sequence_a.length - 1, sequence_b[i])-1;
+            //-1 для того, чтобы показывать, после какого элемента последовательности а надо вставлять элемент
         }
         return all_places;
     }

@@ -33,23 +33,38 @@ public class sequence_remove_elements {
     public int find_quantity_of_elements_to_remove(int[] sequence){
         int k_num = 0;
         if(!is_sorted_properly(sequence)) {
-            int n = sequence.length;
-            int new_sequence_length = 0;
-
-
-            int[] extraArray = new int[n];
-            extraArray[0]=MIN;
-            for (int i = 1; i < n; i++)
-                extraArray[i] = MAX;
-
-            for (int i = 0; i < n - 1; i++) {
-                int j=binary_search(extraArray,0,n-1,sequence[i]);
-                if (extraArray[j-1]<sequence[i] && sequence[i] < extraArray[j]){
-                    extraArray[j]=sequence[i];
-                    new_sequence_length=Math.max(new_sequence_length,j);
+            boolean cont_search = false;
+            int[] flags_arr = new int[sequence.length];
+            int step_element = 0;
+            do{
+                int j = step_element;
+                int i = step_element+1;
+                for(;i<sequence.length;i++) {
+                    if (sequence[j] < sequence[i])
+                        flags_arr[i] = 1;
+                    else {
+                        if (sequence[j] > sequence[i])
+                            flags_arr[i] = -1;
+                        else
+                            flags_arr[i] = 0;
+                    }
+                    if (flags_arr[i] != -1)
+                        j = i;
                 }
+                int check_num = 0;
+                for(int z=0;z < flags_arr.length; z++){
+                    if(flags_arr[z] < 0)
+                        check_num++;
+                }
+                cont_search = !((check_num <= flags_arr.length/2)||(check_num < 2)||(step_element == flags_arr.length));
+                if(cont_search)
+                    step_element++;
             }
-            k_num = n-new_sequence_length;
+            while(cont_search);
+            for(int z=0;z < flags_arr.length; z++){
+                if(flags_arr[z] < 0)
+                    k_num++;
+            }
         }
         return k_num;
     }
