@@ -1,4 +1,8 @@
-package com.company.first_lab.Classes;
+package com.company.first_lab.Classes.task_nine;
+
+import com.company.first_lab.Classes.task_nine.ball_class;
+import com.company.first_lab.Classes.task_nine.ball_colors;
+import com.company.first_lab.Classes.task_nine.basket_class;
 
 public class main_for_nine {
     private static int[] nineth_task_exmpl(){

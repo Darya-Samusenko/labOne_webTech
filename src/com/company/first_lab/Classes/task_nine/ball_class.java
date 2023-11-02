@@ -1,6 +1,6 @@
-package com.company.first_lab.Classes;
+package com.company.first_lab.Classes.task_nine;
 
-import com.company.first_lab.Classes.ball_colors;
+import com.company.first_lab.Classes.task_nine.ball_colors;
 public class ball_class {
     private int weight;
     private ball_colors color;

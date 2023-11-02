@@ -1,4 +1,7 @@
-package com.company.first_lab.Classes;
+package com.company.first_lab.Classes.task_nine;
+
+import com.company.first_lab.Classes.task_nine.ball_class;
+import com.company.first_lab.Classes.task_nine.ball_colors;
 
 import java.util.ArrayList;
 import java.util.List;
