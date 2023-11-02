@@ -1,6 +1,6 @@
 package com.company.first_lab.Classes.tasks_12_16;
 
-public class Book {
+public class Book implements Comparable<Book> {
     private String title;
     private String author;
     private int price;
@@ -12,6 +12,14 @@ public class Book {
         this.author = auth;
         this.price = money;
     }
+
+    public Book(String ttl, String auth, int money, int isbn){
+        this.title = ttl;
+        this.author = auth;
+        this.price = money;
+        this.isbn = isbn;
+    }
+
     public Book(){}
 
     public String get_author(){
@@ -55,5 +63,10 @@ public class Book {
     public Book clone(){
         Book new_book = new Book(this.title, this.author, this.price);
         return new_book;
+    }
+
+    @Override
+    public int compareTo(Book o) {
+        return this.isbn-o.isbn;
     }
 }
