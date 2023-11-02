@@ -16,9 +16,9 @@ class formula_classTest {
 
         for( int test_it = 0; test_it < 1000; test_it++)
             for( int i =0; i< test_numbers.length;i++){
-                formula_class test_formula = new formula_class(test_numbers[i][0],test_numbers[i][1]);
-                double res = test_formula.calc();
-                Assertions.assertEquals(true, is_quite_close(correct_results[i], test_formula.calc()));
+                formula_class test_formula = new formula_class();
+                double res = test_formula.calc(test_numbers[i][0],test_numbers[i][1]);
+                Assertions.assertEquals(true, is_quite_close(correct_results[i], res));
             }
     }
 }

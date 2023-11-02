@@ -22,9 +22,10 @@ class array_sort_classTest {
     void sort_array() {
         for(int i = 0; i< TEST_ITERATIONS_QUANTITY;i++){
             int[] curr_test_array = generateArray();
-            array_sort_class sorted_on_test = new array_sort_class(curr_test_array);
+            int[] duplicated_array = curr_test_array;
+            array_sort_class sorted_on_test = new array_sort_class();
             Arrays.sort(curr_test_array);
-            Assertions.assertEquals(curr_test_array, sorted_on_test.sort_array());
+            Assertions.assertEquals(curr_test_array, sorted_on_test.sort_array(duplicated_array));
         }
     }
 }
