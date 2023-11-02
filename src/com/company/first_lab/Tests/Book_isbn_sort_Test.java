@@ -2,6 +2,7 @@ package com.company.first_lab.Tests;
 
 import com.company.first_lab.Classes.tasks_12_16.Book;
 import com.company.first_lab.Classes.tasks_12_16.array_sorting;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -55,7 +56,9 @@ class Book_isbn_sort_Test {
     void check_sort_results(){
         generate_test_array_and_answer();
         new array_sorting().sort_by_isbn(test_books);
-        check_all_array(required_answer, test_books);
+        Assertions.assertEquals(true,check_all_array(required_answer, test_books));
+        Arrays.sort(test_books);
+        Assertions.assertEquals(true,check_all_array(required_answer, test_books));
     }
 
 
