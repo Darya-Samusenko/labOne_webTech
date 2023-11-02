@@ -67,6 +67,6 @@ public class Book implements Comparable<Book> {
 
     @Override
     public int compareTo(Book o) {
-        return this.isbn-o.isbn;
+        return (this.isbn-o.isbn);
     }
 }

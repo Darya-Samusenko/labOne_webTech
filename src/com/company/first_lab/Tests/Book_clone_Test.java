@@ -32,9 +32,9 @@ class Book_clone_Test {
     @Test
     void testClone() {
         generate_test_array();
-        Book[] cloned_array = new Book[arr_len];
         for(int i = 0; i<arr_len;i++){
-            Assertions.assertEquals(true, is_same(test_books[i], cloned_array[i]));
+            Book curr_clone = test_books[i].clone();
+            Assertions.assertEquals(true, is_same(test_books[i], curr_clone));
         }
     }
 }
