@@ -1,10 +1,7 @@
-package com.company.first_lab;
+package com.company.first_lab.Classes;
 
-import com.company.first_lab.Classes.*;
-
-public class Main {
-
-    public static int[] tenth_task_solution(){
+public class main_for_9 {
+    private static int[] nineth_task_exmpl(){
         final int balls_quantity = 40;
         ball_class[] basket_balls = new ball_class[balls_quantity];
         for(int i =0; i< balls_quantity;i++){
@@ -34,6 +31,6 @@ public class Main {
         return results;
     }
     public static void main(String[] args) {
-        tenth_task_solution();
+        nineth_task_exmpl();
     }
 }
