@@ -9,10 +9,10 @@ public class field_coordinates_class {
         if(Math.abs(x) > checkpoints[0])
             is_inside = false;
         else {
-            if ((Math.abs(y) < checkpoints[2]) || (Math.abs(y) > checkpoints[3]))
+            if ((y < checkpoints[2]) || (y > checkpoints[3]))
                 is_inside = false;
             else {
-                if ((Math.abs(x) > checkpoints[1]) && (Math.abs(y) > checkpoints[4]))
+                if ((Math.abs(x) > checkpoints[1]) && (y > checkpoints[4]))
                     is_inside = false;
             }
         }
