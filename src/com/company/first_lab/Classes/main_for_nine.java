@@ -1,6 +1,6 @@
 package com.company.first_lab.Classes;
 
-public class main_for_9 {
+public class main_for_nine {
     private static int[] nineth_task_exmpl(){
         final int balls_quantity = 40;
         ball_class[] basket_balls = new ball_class[balls_quantity];
